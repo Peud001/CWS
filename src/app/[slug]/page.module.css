@@ -1,0 +1,12 @@
+
+.imageContainer{
+   position: relative;
+   height: 400px;  
+}
+
+
+@media (max-width: 668px){
+   .imageContainer{
+      height: 300px;
+   }
+}

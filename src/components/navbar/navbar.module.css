@@ -1,0 +1,19 @@
+.main{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.container{
+    display: flex;
+    gap: 20px;
+}
+.logout{
+    background: transparent;
+    border: none;
+    color: var(--txt);
+}
+
+@media (max-width: 768px){
+    
+}

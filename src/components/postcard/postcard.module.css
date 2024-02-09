@@ -1,0 +1,19 @@
+.main{
+    display: flex;
+    gap: 20px;
+    margin: 10px 0;
+}
+.postImageDiv{
+    position: relative;
+    height: 150px;
+    width: 250px;
+}
+.postImage{
+    object-fit: cover;
+}
+.postText{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
