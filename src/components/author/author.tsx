@@ -2,11 +2,11 @@ import { getUser } from '@/lib/data'
 import React from 'react'
 
 
-const Author = async({userId}: {userId: number}) => {
+const Author = async({userId}) => {
 
     const user = await getUser(userId)
 
-  return <div>{`${user && user.name}`}</div>;
+  return <div>{user?.name}</div>;
 }
 
 export default Author

@@ -22,7 +22,7 @@ const SinglePost = async({params}) => {
       </div>
       <h3>{`${post && post.title}`}</h3>
       <div>
-        <Author userId={post.userId}/>
+        <Author userId={post?.id} />
         <span>October 10, 2023</span>
         <span>4 min read</span>
       </div>
