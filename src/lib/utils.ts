@@ -1,18 +1,17 @@
 import mongoose from "mongoose";
 
-interface ConnectionStatus {
-  isConnected?: number;
-}
 
-const connection: ConnectionStatus = {}
+const connection: any = {}
 
 export const connectToDb = async() => {
     try {
         if (connection.isConnected) {
+            console.log("conected");
             return
         }
-        const db = await mongoose.connect(process.env.mongo as string);
-        connection.isConnected = db.connections[0].readyState 
+        const db = await mongoose.connect(process.env.MONGO!);
+        connection.isConnected = db.connections[0].readyState
+        console.log("conected") 
     } catch (error) {
       throw new Error("Unable to connect to database")
     }

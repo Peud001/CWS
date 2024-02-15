@@ -15,6 +15,7 @@ interface PostCardProps {
 }
 
 const PostCard: React.FC<PostCardProps> = ({ post }) => {
+
   return (
     <main className={styles.main}>
       <div className={styles.postImageDiv}>
@@ -33,7 +34,7 @@ const PostCard: React.FC<PostCardProps> = ({ post }) => {
           <span>Author</span>
           <span>Time Ago</span>
         </div>
-        <div>{post.body}</div>
+        <div>description</div>
       </div>
     </main>
   );

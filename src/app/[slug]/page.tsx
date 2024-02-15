@@ -4,16 +4,12 @@ import Image from 'next/image'
 import Author from '@/components/author/author';
 import { getPost } from '@/lib/data';
 
-interface slugType {
-  slug : string | number
-}
-
-
-const SinglePost = async({params}) => {
+const SinglePost = async({params}: any) => {
 
   const {slug} = params
 
   const post = await getPost(slug)
+  console.log(post)
 
   return (
     <main>

@@ -1,6 +1,8 @@
+"use server"
 import PostCard from "@/components/postcard/postcard";
 import styles from './pages.module.css'
 import { getPosts } from "@/lib/data";
+import { connectToDb } from "@/lib/utils";
 
 interface postType {
   userId : number
@@ -11,10 +13,14 @@ interface postType {
 
 const Home = async() => {
 
-  const data = await getPosts()
+  const connect = connectToDb()
+  console.log(connect);
+
+  const posts = await getPosts()
+
   return (
     <main className={styles.main}>
-      {data && data.map((post: postType) => <PostCard key={post.id} post={post} />)}
+      {posts && posts.map((post: postType) => <PostCard key={post.id} post={post} />)}
     </main>
   );
 }
